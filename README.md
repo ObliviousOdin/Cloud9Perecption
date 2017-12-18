@@ -60,7 +60,7 @@ git clone https://github.com/PointCloudLibrary/pcl pcl-trunk
 cd pcl-trunk
 
 cd pcl-trunk && mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+ccmake ..
 make -j4
 sudo make -j4 install
 
