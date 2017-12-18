@@ -1,4 +1,4 @@
-# Cloud9Perecption
+# Cloud 9 Perecption
 
 ### UPDATE AND INSTALL PACKAGES ###
 sudo apt-get update
@@ -53,7 +53,18 @@ sudo chmod a+x install.sh
 sudo ./install.sh
 
 
+### PCL from Source ###
+cd ~
+sudo apt-get install git
+git clone https://github.com/PointCloudLibrary/pcl pcl-trunk
+cd pcl-trunk
 
+cd pcl-trunk && mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+make -j4
+sudo make -j4 install
+
+sudo apt-get install libproj-dev   ## incase it gives libproj.so error
 
 
 
